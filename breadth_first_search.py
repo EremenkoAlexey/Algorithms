@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 """
 Created on Thu Nov 10 11:41:49 2022
 
@@ -25,6 +26,8 @@ visited = {ROOT:""}
 
 def breadth_first_search(graph, root, key)->bool:
     """Looks for KEY in graph. Returns True if KEY found"""
+    if graph == {}:
+        return False
     queue = [root]
     def check_cell(value: str)-> str:
         if value == key:
